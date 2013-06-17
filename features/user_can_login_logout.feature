@@ -10,7 +10,6 @@ Feature: Users can log in and log out
         And I fill in "bob@example.com" for "Email"
         And I fill in "password1" for "Password"
         And I press "Sign in"
-        Then I should see "You are now logged in."
         And I should not see "Log In"
 
     Scenario: Wrong Password

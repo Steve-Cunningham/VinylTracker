@@ -1,8 +1,10 @@
 VinylTracker::Application.routes.draw do
   
-  devise_for :users
+  devise_for :users do
+    resources :albums, only: [:index, :new, :create, :destroy]
+  end
 
-  root :to => 'home#index'
+  root :to => 'albums#index'
 
 
   # The priority is based upon order of creation:

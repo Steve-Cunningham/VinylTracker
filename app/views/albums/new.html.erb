@@ -1,0 +1,9 @@
+<%= simple_form_for @album do |f| %>
+  <%= f.input :artist, label: 'Artist' %>
+  <%= f.input :title, label: 'Title' %>
+  <%= f.input :year, label: 'Year' %>
+  <%= f.input :label, label: 'Label' %>
+  <%= f.input :condition, label: 'Condition', as: :select, collection: ["VG", "EX", "NM", "Sealed"] %>
+  <%= f.input :other, label: 'Other notes' %>
+  <%= f.button :submit, 'Add Album' %>
+<% end %>
