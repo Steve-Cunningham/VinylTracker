@@ -4,13 +4,14 @@
 
 <table class="table table-striped">
 
-    <% @albums.each do |album| %>
+    <% @current_user.albums.each do |album| %>
     <tr>
         <td><%= album.artist %></td>
         <td><%= link_to album.title, "#" %></td>
         <td><%= album.year %><td>
         <td><%= album.condition %><td>
         <td><%= album.other %><td>
+        <td><%= button_to "exterminate", album, :method=>:delete, :class=>:destroy %>
     </tr>
     <% end %>
 
