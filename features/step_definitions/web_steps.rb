@@ -26,3 +26,20 @@ end
 Then(/^I should not see "(.*?)"$/) do |content|
   page.should_not have_content(content)
 end
+
+
+When(/^I go to the index page$/) do
+  visit('/albums')
+end
+
+When(/^I click on "(.*?)"$/) do |arg1|
+  click_link_or_button text
+end
+
+Then(/^I fill in "(.*?)" with "(.*?)"$/) do |arg1, arg2|
+  fill_in field_named, with: value
+end
+
+Then(/^I select "(.*?)" from "(.*?)"$/) do |arg1, arg2|
+  dropdown ('Country'), select: 'United States'
+end

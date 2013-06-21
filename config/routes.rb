@@ -1,10 +1,14 @@
 VinylTracker::Application.routes.draw do
   
   devise_for :users do
-    resources :albums, only: [:index, :new, :create, :destroy]
+    resources :albums, only: [:index, :new, :create, :destroy, :edit]
   end
 
   root :to => 'albums#index'
+
+  match 'albums/discogs' => 'albums#discogs'
+  match 'albums/:id' => 'albums#edit'
+
 
 
   # The priority is based upon order of creation:

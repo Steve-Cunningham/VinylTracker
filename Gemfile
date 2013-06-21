@@ -15,6 +15,7 @@ group :assets do
   gem "twitter-bootstrap-rails"
   gem 'simple_form'
   gem 'country_select'
+  gem 'discogs-wrapper'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -26,6 +27,7 @@ group :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'capybara'
+  gem 'fabrication'
   gem 'rspec-rails'
   gem 'launchy'
 end

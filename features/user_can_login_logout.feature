@@ -11,6 +11,7 @@ Feature: Users can log in and log out
         And I fill in "password1" for "Password"
         And I press "Sign in"
         And I should not see "Log In"
+        And I should see "Signed in as"
 
     Scenario: Wrong Password
         Given the user "bob@example.com" with password "password1"

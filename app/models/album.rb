@@ -3,4 +3,7 @@ class Album < ActiveRecord::Base
   validates_presence_of :user
 
   belongs_to :user
+
+  scope :search_by, lambda{|search_term| where(:artist => search_term)}
+
 end

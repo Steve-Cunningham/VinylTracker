@@ -1,8 +1,16 @@
+<h3>Search Discogs:</h3>
+<%= form_tag albums_path :method => 'get' do |f| %>
+  <%= text_field_tag :search %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<h3>Add New Album:</h3>
 <%= simple_form_for @album do |f| %>
   <%= f.input :artist, label: 'Artist' %>
   <%= f.input :title, label: 'Title' %>
   <%= f.input :year, label: 'Year' %>
   <%= f.input :label, label: 'Label' %>
+  <%= f.input :country, label: 'Country' %>
   <%= f.input :condition, label: 'Condition', as: :select, collection: ["VG", "EX", "NM", "Sealed"] %>
   <%= f.input :other, label: 'Other notes' %>
   <%= f.button :submit, 'Add Album' %>
