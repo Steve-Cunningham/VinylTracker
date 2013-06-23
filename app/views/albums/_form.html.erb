@@ -11,19 +11,15 @@
   </div>
   <% end %>
  
-  <div class="field">
-    <%= f.label :artist %><br />
-    <%= f.text_field :artist %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :year %><br />
-    <%= f.text_field :year %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Save Changes" %>
-  </div>
+<%= simple_form_for @album do |f| %>
+  <%= f.input :artist, label: 'Artist' %>
+  <%= f.input :title, label: 'Title' %>
+  <%= f.input :year, label: 'Year' %>
+  <%= f.input :label, label: 'Label' %>
+  <%= f.input :country, label: 'Country', as: :select, collection: 
+       ["U.S.", "U.K.", "Japan", "Canada", "Germany"] %>
+  <%= f.input :condition, label: 'Condition', as: :select, collection: ["G","VG", "VG+", "NM", "M", "Sealed"] %>
+  <%= f.input :other, label: 'Other notes' %>
+  <%= f.button :submit, 'Save Changes' %>
+<% end %>
 <% end %>

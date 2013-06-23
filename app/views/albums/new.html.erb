@@ -5,7 +5,8 @@
   <%= f.input :title, label: 'Title' %>
   <%= f.input :year, label: 'Year' %>
   <%= f.input :label, label: 'Label' %>
-  <%= f.input :country, label: 'Country' %>
+  <%= f.input :country, label: 'Country', as: :select, collection: 
+       ["U.S.", "U.K.", "Japan", "Canada", "Germany"] %>
   <%= f.input :condition, label: 'Condition', as: :select, collection: ["G","VG", "VG+", "NM", "M", "Sealed"] %>
   <%= f.input :other, label: 'Other notes' %>
   <%= f.button :submit, 'Add Album' %>
