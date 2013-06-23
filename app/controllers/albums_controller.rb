@@ -27,7 +27,18 @@ class AlbumsController < ApplicationController
 
     def edit
       @album = Album.find(params[:id])
-      redirect_to edit_album_path(album)
+    end
+
+    def update
+      @album = Album.find(params[:id])
+
+      if @album.update_attributes(params[:album])
+        redirect_to(albums_path,
+                  :notice => 'Album was successfully updated.')
+      else
+        flash[:notice].now = "Changes not saved"
+        render :action => "edit"
+      end
     end
 
     def destroy

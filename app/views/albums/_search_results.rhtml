@@ -1,0 +1,6 @@
+<ul>
+    <% @current_user.albums.each do |album| %>
+  <li><%= album.title, 
+    :action => 'show', :id => album.id  %></li>
+  <% end %>
+  </ul>

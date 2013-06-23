@@ -1,0 +1,6 @@
+<h3>Search Discogs:</h3>
+<%= form_tag albums_path :method => 'get' do |f| %>
+  <%= text_field_tag 'discogs_search_artist', :placeholder => 'Artist' %>
+  <%= text_field_tag 'discogs_search_title', :placeholder => 'Title' %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>

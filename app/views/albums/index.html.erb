@@ -21,8 +21,8 @@
         <td><%= album.condition %></td>
         <td><%= album.country %></td>
         <td><%= album.other %></td>
-        <td><%= button_to "Edit", album, :method=>:edit %></td>
-        <td><%= button_to "Delete", album, :method=>:delete, :class=>:destroy %></td>
+        <td><%= link_to "Edit", edit_album_path(album) %></td>
+        <td><%= link_to "Delete", album, :method=>:delete, :class=>:destroy %></td>
     </tr>
     <% end %>
 
