@@ -1,5 +1,5 @@
-Given(/^the user "(.*?)" with password "(.*?)"$/) do |email, password|
-  user = User.create( email: email, password: password)
+Given(/^the user '(.*?)' with password 'password(\d+)'$/) do |email, password|
+  user = User.create( user: email, password: password)
   refute user.new_record?
 end
 
@@ -33,13 +33,13 @@ When(/^I go to the index page$/) do
 end
 
 When(/^I click on "(.*?)"$/) do |arg1|
-  click_link_or_button text
+  click_link arg1
 end
 
 Then(/^I fill in "(.*?)" with "(.*?)"$/) do |arg1, arg2|
-  fill_in field_named, with: value
+  fill_in arg1, with: arg2
 end
 
 Then(/^I select "(.*?)" from "(.*?)"$/) do |arg1, arg2|
-  dropdown ('Country'), select: 'United States'
+  select(arg1, :from => arg2)
 end

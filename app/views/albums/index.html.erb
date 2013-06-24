@@ -1,4 +1,5 @@
-<h4> <%= link_to "Add Album   ", new_album_path %><%= link_to "Add Album From Discogs", "#" %></h4>
+<h4><%= link_to "Add Album", new_album_path %></h4>
+<h4><%= link_to "Add Album From Discogs", albums_discogs_path %></h4>
 
 <%= form_tag albums_path, :method => 'get', :user_id => current_user.id do %>
   <p>

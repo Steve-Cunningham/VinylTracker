@@ -8,4 +8,8 @@ class DiscogsController < ApplicationController
       @discog = Discogs::Wrapper.new("GUSwPzlueIDPdoFRrwkC")
     end
 
+    def search
+      artist = wrapper.get_artist( params[:discogs_search_artist] )
+    end
+
 end

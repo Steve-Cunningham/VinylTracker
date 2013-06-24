@@ -1,0 +1,2 @@
+Fabricator(:album) do
+end

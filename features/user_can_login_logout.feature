@@ -4,10 +4,10 @@ Feature: Users can log in and log out
     I want to log in
 
     Scenario: Happy Path
-        Given the user "bob@example.com" with password "password1"
-        When I go to the homepage
+        Given the user 'joe@example.com' with password 'password1'
+        When I go to the index page
         And I click "Log In"
-        And I fill in "bob@example.com" for "Email"
+        And I fill in "joe@example.com" for "Email"
         And I fill in "password1" for "Password"
         And I press "Sign in"
         And I should not see "Log In"
