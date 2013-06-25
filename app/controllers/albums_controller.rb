@@ -1,10 +1,11 @@
 class AlbumsController < ApplicationController
   before_filter :authenticate_user!
+  helper_method :sort_column, :sort_direction
 
     def index
 
       if params[:search].blank?
-        @albums = current_user.albums.all
+        @albums = current_user.albums.order(sort_column + " " + sort_direction)
       else
         @albums = current_user.albums.search_by(params[:search])
       end
@@ -51,5 +52,15 @@ class AlbumsController < ApplicationController
         render :index
       end
     end
+
+  private
+
+    def sort_column
+    Album.column_names.include?(params[:sort]) ? params[:sort] : "artist"
+  end
+  
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
 
 end

@@ -5,7 +5,7 @@ Feature: Users can log in and log out
 
     Scenario: Happy Path
         Given the user 'joe@example.com' with password 'password1'
-        When I go to the index page
+        When I go to the homepage
         And I click "Log In"
         And I fill in "joe@example.com" for "Email"
         And I fill in "password1" for "Password"

@@ -1,6 +1,6 @@
-Given(/^the user '(.*?)' with password 'password(\d+)'$/) do |email, password|
-  user = User.create( user: email, password: password)
-  refute user.new_record?
+Given(/^the user '(.*?)' with password '(.*)'$/) do |email, password|
+  user = User.create( email: email, password: password)
+  refute user.new_record?, user.errors.full_messages.join(".")
 end
 
 When(/^I go to the homepage$/) do
