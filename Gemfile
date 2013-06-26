@@ -6,6 +6,7 @@ gem 'devise'
 gem 'pg'
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
+gem 'simple_form'
 
 
 # Gems used only for assets and not required
@@ -15,7 +16,6 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-sass', '~> 2.3.2'
   gem "twitter-bootstrap-rails"
-  gem 'simple_form'
   gem 'country_select'
   gem 'discogs-wrapper'
 
