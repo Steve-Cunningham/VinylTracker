@@ -7,6 +7,8 @@ gem 'pg'
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'bootstrap-sass', '~> 2.3.2'
+gem "twitter-bootstrap-rails"
 
 
 # Gems used only for assets and not required
@@ -14,8 +16,6 @@ gem 'simple_form'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'bootstrap-sass', '~> 2.3.2'
-  gem "twitter-bootstrap-rails"
   gem 'country_select'
   gem 'discogs-wrapper'
 
