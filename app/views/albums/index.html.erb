@@ -18,6 +18,7 @@
         <th><%= link_to "Title", :sort => "title" %></th>
         <th><%= link_to "Artist", :sort => "artist" %></th>
         <th><%= link_to "Year", :sort => "year" %></th>
+        <th><%= link_to "Label", :sort => "label" %></th>
         <th><%= link_to "Cond.", :sort => "condition" %></th>
         <th><%= link_to "Country", :sort => "country" %></th>
         <th>Misc.</th>
@@ -31,6 +32,7 @@
         <td><%= link_to album.title, edit_album_path(album) %></td>
         <td><%= album.artist %></td>
         <td><%= album.year %></td>
+        <td><%= album.label %></td>
         <td><%= album.condition %></td>
         <td><%= album.country %></td>
         <td><%= album.other %></td>
