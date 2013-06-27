@@ -3,11 +3,11 @@
 <%= simple_form_for @album do |f| %>
   <%= f.input :artist, label: 'Artist' %>
   <%= f.input :title, label: 'Title' %>
-  <%= f.input :year, label: 'Year' %>
+  <%= f.input :year, label: 'Year', as: :select, collection: 1950..2013 %>
   <%= f.input :label, label: 'Label' %>
   <%= f.input :country, label: 'Country', as: :select, collection: 
        ["U.S.", "U.K.", "Japan", "Canada", "Germany"] %>
-  <%= f.input :condition, label: 'Condition', as: :select, collection: ["G","VG", "VG+", "NM", "M", "Sealed"] %>
+  <%= f.input :condition, label: 'Condition', collection: ["G","VG", "VG+", "NM", "M", "Sealed"], :as => :radio_buttons, :item_wrapper_class => 'inline' %>
   <%= f.input :other, label: 'Other notes' %>
   <%= f.button :submit, 'Add Album' %>
 <% end %>

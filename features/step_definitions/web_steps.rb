@@ -19,6 +19,10 @@ When(/^I fill in "(.*?)" for "(.*?)"$/) do |value, field_named|
   fill_in field_named, with: value
 end
 
+When (/^(?:|I )choose "([^"]*)"$/) do |field|
+  choose(field)
+end
+
 Then(/^I should see "(.*?)"$/) do |content|
   page.should have_content(content)
 end

@@ -28,13 +28,12 @@
 
     <% @albums.each do |album| %>
     <tr>
-        <td><%= link_to album.title, "#" %></td>
+        <td><%= link_to album.title, edit_album_path(album) %></td>
         <td><%= album.artist %></td>
         <td><%= album.year %></td>
         <td><%= album.condition %></td>
         <td><%= album.country %></td>
         <td><%= album.other %></td>
-        <td><%= link_to "Edit", edit_album_path(album) %></td>
         <td><%= link_to "Delete", album, :method=>:delete, :class=>:destroy %></td>
     </tr>
     <% end %>

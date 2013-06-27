@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><%= VinylTracker %></title>
+    <link href='http://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -16,13 +17,10 @@
             <%= link_to "VinylTracker", "#", id: "logo" %>
           <nav>
             <ul class="nav pull-right">
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Help", '#' %></li>
               <li><% if current_user %>
-                <%= "Signed in as #{current_user.email}" %>
-                <% end %></li>
-              <li><%= link_to "Home",    root_path %></li>
-              <li><%= link_to "Help",    '#' %></li>
-              <li><% if current_user %>
-                    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+                    <%= link_to "Signed in as #{current_user.email}", destroy_user_session_path, :method => :delete %>
                         <% else %>
                         <%= link_to "Log In", new_user_session_path %>
                     <% end %></li>
