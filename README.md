@@ -29,6 +29,8 @@ Features
 Usage Instructions
 ------------------
 
+Visit [http://vinyltracker.herokuapp.com](http://vinyltracker.herokuapp.com)
+
 
 Author
 ------
